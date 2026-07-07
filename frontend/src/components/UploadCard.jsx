@@ -336,13 +336,17 @@ const handleFileUpload = (event) => {
           <EntityCard entities={result.entities} />
 
           <SummaryCard title="⚠ Responsible AI Notice">
-            <p>
-              This meeting summary was generated using Azure OpenAI GPT-5 Mini
-              and Azure AI Language. AI-generated content may contain
-              inaccuracies. Always verify important decisions before acting on
-              them.
-            </p>
-          </SummaryCard>
+  <p>
+    This application follows Microsoft's Accountability and Reliability &
+    Safety principles. AI-generated meeting summaries may occasionally
+    misinterpret discussions or assign tasks to the wrong participant.
+    The meeting organizer is responsible for reviewing and verifying all
+    summaries, decisions, and action items before sharing or acting on
+    them. To reduce this risk, Azure AI Language Service extracts people,
+    organizations, locations, and dates from the transcript so users can
+    cross-check important information before making decisions.
+  </p>
+</SummaryCard>
 
         </div>
 
