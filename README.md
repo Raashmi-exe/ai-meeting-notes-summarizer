@@ -1,16 +1,98 @@
-# React + Vite
+# AI Meeting Notes Summarizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Overview
 
-Currently, two official plugins are available:
+AI Meeting Notes Summarizer is a web application that uses Azure OpenAI and Azure AI Language Services to automatically summarize meeting transcripts and extract important information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Executive Summary
+- Key Discussion Points
+- Decisions Taken
+- Action Items
+- Named Entity Recognition (People, Organizations, Locations, Dates)
+- PDF Export
+- Responsible AI Notice
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the Oxlint configuration
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- jsPDF
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Backend
+- Node.js
+- Express.js
+
+### Azure Services
+- Azure OpenAI (GPT-5 Mini)
+- Azure AI Language Service
+
+## Project Structure
+
+```
+ai-meeting-notes-summarizer/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── routes/
+│   ├── services/
+│   ├── uploads/
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+```
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file inside the backend folder using `.env.example`.
+
+Required variables:
+
+```
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_API_KEY=
+AZURE_OPENAI_MODEL=
+AZURE_LANGUAGE_ENDPOINT=
+AZURE_LANGUAGE_KEY=
+PORT=5000
+```
+
+## Future Improvements
+
+- Audio transcription support
+- Speaker identification
+- Meeting history
+- Authentication
+- Cloud deployment
+
+## Authors
+
+Raashmi Chekuri
+VIT-AP University
